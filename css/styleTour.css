@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 .container{
     z-index: 2;
     position: relative;
