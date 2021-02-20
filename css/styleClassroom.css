@@ -1,11 +1,14 @@
+body{
+    overflow-x: hidden;
+}
 /*Color Pallet*/
 :root{
     --font-color:#555; /*variable for the font color, so we can change more easily*/
-    --font-MainBabyBlue: #8ecae6;
-    --font-MainMiddleBlue:#219ebc;
-    --font-MainDarBlue:#023047;
-    --font-MainYellow:#ffb703;
-    --font-MainOrange:#fb8500;
+    --font-MainBabyBlue: #dde5b6;
+    --font-MainMiddleBlue:#adc178;
+    --font-MainDarBlue:#6c584c;
+    --font-MainYellow:#f0ead2;
+    --font-MainOrange:#a98467;
 }
 /*classrooms area*/
 #classroomInfo{
