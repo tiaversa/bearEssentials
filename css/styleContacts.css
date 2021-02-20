@@ -1,0 +1,91 @@
+
+:root{
+    --font-color:#555; /*variable for the font color, so we can change more easily*/
+    --font-hover-color: #8ecae6;
+}
+body{
+    background-color: #f5f5f5;
+}
+.image{
+    z-index: -1;
+    position:absolute;
+    background-image: url('../images/teddy-2977694_1280.jpg');
+    width: 100%;
+    top:-158ecae6px;
+    height: 100%;
+}
+.container{
+    z-index: 2;
+    position: relative;
+    float: left;
+    width: 500px;
+    box-shadow: 0 15px 35px rgb(50,50,93,.1), 0 15px rgba(0,0,0,.07);
+    padding: 2em;
+    background-color: white;
+    margin: 20px;
+    
+}
+.form-group{/*div tag selecting each form element*/
+    margin-bottom: 1.5em;
+}
+.form-label{
+    font-size: .75em;
+    color:var(--font-color);
+    display: block;/*the label shows on top of the element*/
+    opacity:0;/*for animation*/
+    transition: all .3s;
+    transform: translateX(-50px);/*put the label to the left to creat and "entrance" animation*/
+}
+.form-control{/*control the input of the form elements*/
+    box-shadow: none;
+    border-radius: 0em;
+    border-color: #ccc;
+    border-style: none none solid none;/*top right bottow left*/
+    font-size: 1.25em;
+    width: 100%;
+    transition: all .6s;/*setting the time for the transitions creating a animation*/
+}
+.form-control::placeholder{
+    color: #aaa;/*changes the color of the place holder*/
+}
+.form-control:focus{/*what happens when the elements of the form get in focus (are selected)*/
+    box-shadow: none;
+    border-color: var(--font-hover-color);
+    outline: none;
+}
+.form-control:invalid:focus{/*while the focus has not filled the requirement it is red*/
+    border-color: red;
+}
+.form-control:valid:focus{/*as soon as the focus has pass the requirement it turns green*/
+    border-color: green;
+}
+.form-group:focus-within{/*scaling both, the object and the parent object (in this case the whole div)*/
+    transform: scale(1.1,1.1);
+}
+/*styling the button*/
+.btn{
+    background: 0 0 snow;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    color: var(--font-color);
+    font-size: 1em;
+    padding: 10 50px;
+    text-transform: uppercase;
+}
+.btn:hover{
+    border-color: var(--font-hover-color);
+    color: var(--font-hover-color);
+}
+
+/*turning off the resize option of the text area*/
+textarea{
+    resize: none;
+}
+
+/*Putting the labels as placeholders*/
+.focused> .form-label{
+    opacity: 1;
+    transform: translateX(0px);
+
+
+}

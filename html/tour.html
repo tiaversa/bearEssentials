@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Bear Essentials Academy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styleTour.css">
+
+
+</head>
+<body>
+    <!--Navegation bar-->
+    <nav>
+        <div class="logo"><a href="../index.html">Bear Essentials Academy</a></div>
+        <ul class="navLinks">
+            <li class="item"><div class="dropdown">
+                <button class="dropbtn item">About Us</button>
+                <div class="dropdown-content item">
+                  <a href="../html/aboutUs.html">Our Daycare</a>
+                  <a href="../html/aboutUs.html#ourStory">Our Story</a>
+                  <a href="../html/aboutUs.html#food">Food, Health & Nutrition</a>
+                  <a href="../index.html#mission">Our Mission</a>
+                  <a href="../index.html#vision">Our Vision</a>
+                  <a href="../html/aboutUs.html#meetStaff">Meet The Staff</a>
+                  <a href="../index.html#parentsTestimonies">Parents Testimonies</a>
+                </div></li>
+                <li class="item"><div class="dropdown">
+                    <button class="dropbtn item">Classrooms</button>
+                    <div class="dropdown-content item">
+                      <a href="../html/classrooms.html">Information</a>
+                      <a href="../html/classrooms.html#serviceRates">Service Rates</a>
+                    </div></li>
+                <li class="item"><a href="./contact.html">Contact</a></li>
+                <li class="item signUp"><a href="./tour.html">Schedule Tour!</a><!--they are displayes from right to left--></li>
+                <li><div class="menuSandwich"><div class="bar1"></div> <div class="bar2"> <div class="bar3"></div></div> </div> </li>
+        </ul>
+    </nav>
+
+    <div class="callTour">Call us fo a tour <a href="tel:+18014136047">+1 801-413-6047</a></div>
+
+    <!--Tour Request Form-->
+    <!--Contact Form-->
+    <div class="container">
+        <form action="" method="POST" class="form">
+            <!--Form name area-->
+            <div class="tourTitle">Tour Request Form</div>
+            <div class="form-group">
+                <!--remember the for attribute on the label need to mach the name atribute-->
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" tabindex="1" required>
+                <!--Don't forget the tabindex, it helps with acessibility-->
+            </div>
+            <!--Form email area-->
+            <div class="form-group">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="abc@email.com" tabindex="2" required>
+            </div>
+            <!--phone number area-->
+            <div class="form-group">
+                <label for="phone" class="form-label">Your Phone Number</label>
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="(123)456-7890" tabindex="3">
+            </div>
+            <!--Date of the visit area-->
+            <div class="form-group">
+                <label for="date" class="formLabelShow">Prefered Date For The Tour</label>
+                <input type="date" class="form-control" id="date" name="date" placeholder="Tour Date 01/01/2021" tabindex="4">
+            </div>
+            <!--Time of the visit area-->
+            <div class="form-group">
+                <input type="radio" class="form-control" id="time10" name="time" tabindex="5">
+                <label for="time10" class="formLabelShow">Tour at 10:00 AM</label>
+            </div>
+            <div class="form-group">
+                <input type="radio" class="form-control" id="time6" name="time" tabindex="5">
+                <label for="time6" class="formLabelShow">Tour at 6:00 PM</label>
+            </div>
+            <!--Child Information-->
+            <!--Child Age area-->
+            <div class="form-group">
+                <label for="age" class="form-label">Child's Age</label>
+                <input type="age" min="0" max="12" class="form-control" id="age" name="age" placeholder="Child's Age" tabindex="5">
+            </div>
+            <!--Form Message Area-->
+            <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <textarea rows="5" class="form-control" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="5"></textarea>
+            </div>
+            <!--Form Submit Button-->
+            <div><button type="submit" class="btn">Send Message</button></div>
+        </form>
+    </div>
+<!--footer-->
+<footer>
+    <div class="information">
+        <h1>Bear Essentials Academy</h1>
+        <div class="infoSub">
+        <p>&#9990 Schedule a tour: <a href="tel:+18014136047">+1 801-413-6047</a></p>
+        <p>&#9993 Email Us: <a href="mailto:timnaaversa@gmail.com">blabla@bla</a></p>
+        <p>Tours: Tuesdays and Thursdays at 10:00 A.M. or 6:00 P.M.</p>
+        </div>
+    </div>
+    <div class="location1">
+        <h2>Taylosville Location</h2>
+        <h3>Bear Essintials Academy</h3>
+        <div class="infoSub">
+        <p>Phone Number: <a href="tel:+18019556145">+1(801)955-6145</a></p>
+        <p>Location: 2145 W. 5400 S. Taylorsville, UT 84118</p>
+        <p>Hours: Monday - Friday 6:30 AM to 6:00 PM</p>
+    </div>
+        <!--adding google-->
+    <div><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12107.838354374988!2d-111.9473353!3d40.6528212!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbfd286cee84da7a!2sBear%20Essentials%20Academy!5e0!3m2!1sen!2sde!4v1613045777368!5m2!1sen!2sde" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+    </div>
+    <div class="location2">
+        <h2>Kearns Location</h2>
+        <h3>BEA Next Generation Kids</h3>
+        <div class="infoSub">
+        <p>Phone Number: <a href="tel:+18019042442">+1(801)904-2442</a></p>
+        <p>Location: 6141 South Redwood Rd. Taylorsville, UT 84123</p>
+        <p>Hours: Monday - Friday 6:30 AM to 6:15 PM</p>
+    </div>
+        <!--adding google-->
+        <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12110.216179670444!2d-111.94740793022463!3d40.63971579999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87528910c85f8b01%3A0xccf9fb9a466650e9!2sBear%20Essentials%20Academy%3A%20Next%20Generation%20Kids!5e0!3m2!1sen!2sde!4v1613138364844!5m2!1sen!2sde" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+    </div>
+    <div class="rights">
+        <p>© Copyright Bear Essential Academy 2021. All Rights Reserved. | <a href="./privacy.html">Privacy</a> | <a href="./disclaimer.html">Disclaimer</a>|</p>
+    </div>
+</footer>
+    </body>
+    </html>

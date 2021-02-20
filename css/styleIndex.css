@@ -1,0 +1,399 @@
+/*Color Pallet*/
+:root{
+    --font-color:#555; /*variable for the font color, so we can change more easily*/
+    --font-MainBabyBlue: #dde5b6;
+    --font-MainMiddleBlue:#adc178;
+    --font-MainDarBlue:#6c584c;
+    --font-MainYellow:#f0ead2;
+    --font-MainOrange:#a98467;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#BGImage{
+    width: 100%;
+    height: 100%;
+}
+nav{
+    position: sticky;
+}
+
+/*writing side of the hero*/
+.hero{
+    width: 49%;
+    min-width: none;
+    height: 600px;
+    position: relative;
+    font-size: 40px;
+    color: var(--font-MainDarBlue);
+    float: left;
+    padding: 10%;
+}
+.wrappingHero{
+    position: relative;
+    margin: 0 auto;
+    display: none;
+}
+.yellow{
+    color: var(--font-MainMiddleBlue);
+}
+/*word rotator*/
+.heroWriting{
+    justify-content: center;
+    text-align: center;
+}
+.wordList{
+width: 200px;
+position: relative;
+justify-content: center;
+height: 100px;
+}
+.changingWordsList{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 45%;
+}
+li.one, li.two, li.three, li.four, li.five, li.six, li.single-word{
+    list-style:none;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    color: var(--font-MainMiddleBlue);
+}
+
+.one, .two, .three, .four, .five, .six{ padding-left: .35em;}
+.single-word{ padding-left: 0;}
+
+/*Animation*/
+.one { 
+    opacity:0;
+    animation: fade 18s 0s infinite linear;
+}
+.two { 
+    opacity:0;
+    animation: fade 18s 3s infinite linear;
+}
+.three { 
+    opacity:0;
+    animation: fade 18s 6s infinite linear;
+}
+.four { 
+    opacity:0;
+    animation: fade 18s 9s infinite linear;
+}
+.five { 
+    opacity:0;
+    animation: fade 18s 12s infinite linear;
+}
+.six { 
+    opacity:0;
+    animation: fade 18s 15s infinite linear;
+    
+}
+
+@keyframes fade{
+    0% {opacity:0;}
+    8% {opacity:1;}
+    15% {opacity:1;}
+    20% {opacity:0;}
+    100% {opacity:0;}
+    
+}
+
+/*the button to schedule a tour*/
+a.button{
+    display: block;
+    padding: 10px;
+    margin: 10px 40px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 100;
+    color: snow;
+    background-color: var(--font-MainMiddleBlue);
+    text-align: center;
+    transition: all 0.2s;
+    font-size: 20px;
+}
+a.button:hover{
+    background-color: var(--font-MainDarBlue);
+    transform: scale(1.1);/*to make it grow*/
+}
+@media all and (max-width:30em){
+    a.button{
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+/*hero right side*/
+.heroRightSide{
+    width: 49%;
+    height: 600px;
+    min-width: none;
+    position: relative;
+    box-sizing: border-box;
+    float: right;
+}
+.bgBox1{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 50%;
+    left: 30%;
+    background-color: var(--font-MainYellow);
+}
+.bgBox2{
+    position: absolute;
+    top:15%;
+    left: 5%;
+    background-color: var(--font-MainMiddleBlue);
+    opacity: 0.9;
+    border-radius: 10px;
+    padding: 30px;
+}
+/*childs quote*/
+.bgBox3{
+background-color: var(--font-MainBabyBlue);
+padding: 15px;
+position: relative;
+    width: 17em;
+    height: 100px;
+}
+
+.bgBox3::before{
+    content: '\201c';
+    top:-40px;
+    left: -10px;
+    color: var(--font-color);
+}
+.bgBox3::after{
+    content: '\201d';
+    bottom: -120px;
+    right: -20px;
+    color: var(--font-color);
+}
+.bgBox3::before, .bgBox3::after{
+    font-size: 9rem;
+    position: absolute;
+}
+/*changing quotes*/
+/*word rotator*/
+.changingQuotesList{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top:25px;
+    left:10px;
+    width: 16em;
+    text-align:left;
+}
+li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix, li.quotesingle-word{
+    list-style:none;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    font-size: 12px;
+}
+
+/*.quoteone, .quotetwo, .quotethree, .quotefour, .quotefive, .quotesix{ padding-left: .35em;}
+.quotesingle-word{ padding-left: 0;}*/
+
+/*Animation*/
+.quoteone { 
+    opacity:0;
+    animation: fade 180s 0s infinite linear;
+}
+.quotetwo { 
+    opacity:0;
+    animation: fade 180s 30s infinite linear;
+}
+.quotethree { 
+    opacity:0;
+    animation: fade 180s 60s infinite linear;
+}
+.quotefour { 
+    opacity:0;
+    animation: fade 180s 90s infinite linear;
+}
+.quotefive { 
+    opacity:0;
+    animation: fade 180s 120s infinite linear;
+}
+.quotesix { 
+    opacity:0;
+    animation: fade 180s 150s infinite linear;
+    
+}
+
+@keyframes fade{
+    0% {opacity:0;}
+    5% {opacity:1;}
+    15% {opacity:1;}
+    18% {opacity:0;}
+    100% {opacity:0;}
+    
+}
+/*Testimonials*/
+.bgBox4{
+    background-color: var(--font-MainDarBlue);
+    position: absolute;
+    color: var(--font-MainYellow);
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    border-radius: 20px;
+    top: 2%;
+    left: 28%;
+    font-size: 25px;
+}
+
+/*Box with the kids projects*/
+.bgBox5{
+    position: relative;
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    background-color: snow;
+    left:25%;
+    top:70%;
+}
+.bgBox5 img{
+    width: 200px;
+    height: 120px;
+}
+.changingImagesList{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Covid policy area*/
+.covidPolicy{
+    box-sizing: border-box;
+    width: 96%;
+    margin: 0px 2% 20px 2%;
+    border: 5px solid;
+    border-color: var(--font-MainYellow);
+    border-radius: 20px;
+    float: left;
+    padding: 40px;
+    color: var(--font-MainDarBlue);
+    text-align: justify;
+}
+.covidPolicy h3{
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+
+
+/*middle area about box*/
+.bgAboutBox{
+    width: 100%;
+    position: relative;
+    float: left;
+}
+/*titles*/
+.bgAboutBox h3{
+    color: snow;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+/*all boxes*/
+.aboutBox{
+    width: 30%;
+    padding: 5%;
+    position: relative;
+    display:inline-table;
+    transition: all 0.2s;
+    margin: 1%;
+}
+.aboutBox:hover{
+    transform: scale(1.1);/*to make it grow*/
+}
+.whoWeAre{
+    background-color: var(--font-MainMiddleBlue);
+}
+.ourMission{
+    background-color: var(--font-MainMiddleBlue);
+}
+.ourVision{
+    background-color: var(--font-MainMiddleBlue);
+}
+
+/*separation yellow box*/
+.separationYellowBox{
+    background-color: var(--font-MainYellow);
+    width: 94%;
+    float: left;
+    height: 50px;
+    color: var(--font-MainDarBlue);
+    text-align: center;
+    margin: 3%;
+    font-size: 30px;
+    justify-content: center;
+}
+
+/*Parents testimonies area*/
+.parentsTestimonies1{
+    float: left;
+margin: 0px 20px 10px 40px;
+padding: 0;
+}
+.parentsTestimonies2{
+    grid-area: ptb2;
+    float: right;
+    margin: 0px 20px 10px 40px;
+    padding: 0;
+    }
+
+.parentsTList{
+    width: 300px;
+    background: var(--font-MainDarBlue);
+    padding: 00px;
+    position:relative;
+    height: 350px;
+    text-align: justify;
+}
+.parentsTList::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid var(--font-MainDarBlue);
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--font-MainDarBlue);
+    border-bottom: 10px solid transparent;
+    right: -20px;
+    top: 36px;
+}
+.chatBox{
+    color: snow;
+    margin: 0;
+    font-size: 15px;
+    margin: 0px;
+}
+.changingPTList{
+    padding-left: 0px;
+    position: relative;
+}
+
+@media screen and (max-width:920px)
+{
+    .hero{
+        width: 100%;
+        height: 400px;
+    }
+    .heroRightSide{
+        width: 100%;
+    }
+    .aboutBox{
+        width: 95%;
+    }
+}

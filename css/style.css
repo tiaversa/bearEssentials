@@ -1,0 +1,319 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    /*Main font*/
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+/*Color Pallet*/
+:root{
+    --font-color:#555; /*variable for the font color, so we can change more easily*/
+    --font-MainBabyBlue: #dde5b6;
+    --font-MainMiddleBlue:#adc178;
+    --font-MainDarBlue:#6c584c;
+    --font-MainYellow:#f0ead2;
+    --font-MainOrange:#a98467;
+}
+li{
+    color:var(--font-MainDarBlue);
+}
+/*base p size and color*/
+p{
+    font-weight: normal;
+    font-size: large;
+}
+
+/*Navagation Bar*/
+/*Main box*/
+nav{
+    /*Base*/
+    position: sticky;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    /*aligh*/
+    display: flex;
+    align-items: center;
+    /*style*/
+    justify-content: space-between;
+    background-color: snow;
+    padding: 5px 20px;/*top and bottow 5, sides 20px*/
+}
+/*Logo side*/
+.logo{
+    justify-content: center;
+    display: flex;
+    align-content: center;
+}
+.logo a{
+/*position*/
+position: relative;
+/*styling*/
+text-decoration: none;
+color:var(--font-MainDarBlue);
+letter-spacing: 5px;
+font-size: 30px;
+font-weight: bold;
+}
+.imageLogo{
+    position: relative;
+    height: 30px;
+    width: 70px;
+    display: inline-block;
+}
+#littleBear {
+    position:absolute;
+    top: -18px;
+    height: 85px;
+    width: 85px;
+}
+/*Nav Links box*/
+.navLinks{
+    position: relative;
+    display:flex;
+    padding: 5px;
+    justify-content: space-around;
+    width: 45%;
+    list-style-type: none;
+}
+
+.item{
+    padding: 3px;
+    text-align: center;
+}
+/*items in the list*/
+.item a{
+    text-decoration: none;
+    color:var(--font-MainDarBlue);
+    font-size: 20px;
+    font-weight: bold;
+}
+.item a:hover{
+    color:var(--font-MainMiddleBlue);
+}
+/*tour buttom*/
+.signUp{
+    background-color: var(--font-MainYellow);
+    border: 2px solid var(--font-MainDarBlue);
+    border-radius: 10px;
+    transition: all .2s;
+}
+.signUp a{
+    color: var(--font-MainDarBlue);
+}
+.signUp:hover{
+    transform: scale(1,1);
+    background-color: snow;
+    box-shadow: 2px 2px 20px var(--font-color);
+}
+/*dropdown menu*/
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+  }
+.dropdown .dropbtn{
+    background-color: snow;
+    border: none;
+    color:var(--font-MainDarBlue);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+    background-color: snow;
+  }
+  /* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropbtn:hover{
+      color: var(--font-MainMiddleBlue);
+  }
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+/*footer*/
+footer{
+    width: 100%;
+    background-color: var(--font-MainMiddleBlue);
+    color: snow;
+    /*grid*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "info  location1 location2"
+                        "rights rights rights";
+}
+footer p{
+    font-size: small;
+}
+.information{
+    grid-area: info;
+    margin: 20px;
+}
+.infoSub{
+    padding: 5px;
+    font-size: small;
+}
+.location1{
+    grid-area: location1;
+}
+.location2{
+    grid-area: location2;
+}
+.location1, .location2{
+    margin: 20px;
+}
+.location1 iframe, .location2 iframe{
+    width: 70%;
+    height: 200px;
+}
+
+.rights{
+    background-color: gray;
+    grid-area: rights;
+    display: flex;
+    justify-content: center;
+}
+.rights p{
+    font-size: 12px;
+}
+.rights a, .information a,.location1 a, .location2 a{
+color: snow;
+}
+.rights a:hover, .information a:hover, .location1 a:hover, .location2 a:hover{
+color: var(--font-MainOrange);
+}
+
+/*sandwich Menu*/
+.menuSandwich{
+display: none;
+background-color: var(--font-MainBabyBlue);
+border-radius: 20px;
+height: 40px;
+padding: 5px 0% 0% 0%;
+cursor: pointer;
+}
+.sandwichBar{
+    position: relative;
+    display: none;
+    margin: 4px;
+    width: 25px;
+    height: 3px;
+    background-color: var(--font-MainDarBlue);
+    transition: all 0.3s ease;
+}
+.menuSandwich:hover .sandwichBar{
+    animation: sandwich 1s ease;
+}
+/*when hover*/
+@keyframes sandwich{
+    0%{transform: rotate(0deg);}
+    /*50%{transform: rotate(180deg);}*/
+    100%{transform: rotate(180deg);}
+}
+.toggle .bar1{
+    transform: rotate(-45deg) translate(-5px,5px);
+}
+.toggle .bar2{
+    opacity: 0;
+}
+.toggle .bar3{
+    transform: rotate(45deg) translate(-5px,-5px);
+}
+
+/* Making the menu responsive*/
+@media screen and (max-width:1230px)
+{
+    .item a{
+        font-size: 15px;
+    }
+    .dropdown .dropbtn{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:1080px) /*mobile*/
+{
+    .menuSandwich{
+        display: block;
+    }
+    .sandwichBar{
+        display: block;
+    }
+    /*navegation links*/
+    .navLinks{
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 6vh;
+        background-color: snow;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    /*make the nav Links fade in*/
+    .navLinks li{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:660px)
+{
+    .logo{
+        padding: 0% 0% 10px 0%;
+    }
+    .logo a{
+        font-size: 15px;
+    }
+    footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info info"
+                            "location1 location2"
+                            "rights rights";
+
+    }
+}
+/*make the menu come from the side*/
+.nav-active{
+    transform: translateX(0%);
+}
+/*animationfor the navBar*/
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*animating the bear*/
+#centerNose, #circleNose{
+    animation: nose 1s infinite;
+}
+@keyframes nose{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(2deg);}
+    100%{transform: rotate(0deg);}
+}

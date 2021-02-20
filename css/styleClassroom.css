@@ -1,0 +1,150 @@
+/*Color Pallet*/
+:root{
+    --font-color:#555; /*variable for the font color, so we can change more easily*/
+    --font-MainBabyBlue: #8ecae6;
+    --font-MainMiddleBlue:#219ebc;
+    --font-MainDarBlue:#023047;
+    --font-MainYellow:#ffb703;
+    --font-MainOrange:#fb8500;
+}
+/*classrooms area*/
+#classroomInfo{
+    text-align: center;
+}
+#classroomInfo h2{
+    font-size: 50px;
+    margin: 20px;
+    color: var(--font-MainDarBlue);
+}
+.mainWriting{
+    background-color: snow;
+    color: var(--font-MainMiddleBlue);
+    font-size: 18px;
+    padding: 5%;
+    text-align: center;
+}
+
+/*rooms scrool*/
+.horizontalSlider{
+    display: block;
+    overflow-x: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.horizontalSlider::-webkit-scrollbar{
+    display: none;
+}
+.horizontalSlider{
+    -ms-overflow-style: none;
+}
+.bgRoomContainer{
+    display: block;
+    white-space: nowrap;
+}
+.roomItem{
+    display: inline-block;
+    margin-right: 15px;
+    width: 600px;
+    height: 300px;
+    background-color: yellow;
+}
+
+/*prices*/
+#prices{
+    background:linear-gradient(45deg,#fcdd8ee7, transparent );
+    padding: 0px 5% 5% 5%;
+}
+.serviceRates{
+    color: var(--font-MainDarBlue);
+    font-size: 30px;
+    font-weight: 600;
+    padding:20px;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+}
+.priceTable{
+    position: relative;
+    border-collapse: collapse;
+    padding: 5px;
+    font-size: 15px;
+    min-width: 500px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px var(--font-color);
+}
+/*editing the head of the table*/
+
+.priceTable thead tr{
+    background-color: var(--font-MainDarBlue);
+    color: snow;
+    text-align: center;
+    font-weight: bold;
+}
+.priceTable tbody tr{
+    border-bottom: 2px solid var(--font-MainDarBlue);
+}
+
+td, th{
+    padding: 12px;
+}
+tr{
+    transition:all .2 ease-in;
+    cursor: pointer;
+}
+tr:hover{
+    transform: scale(1.02);
+    box-shadow: 2px 2px 20px var(--font-color);
+}
+
+/*other prices area*/
+.otherPrices{
+    display: flex;
+}
+.oderOption{
+    position: relative;
+    width:25%;
+    min-width: 200px;
+    margin: 3%;
+    border-radius: 5px;
+    border: 2px solid var(--font-MainDarBlue);
+    font-size: 18px;
+    overflow: hidden;
+    background-color: var(--font-MainBabyBlue);
+    transition:all .2 ease-in;
+    cursor: pointer;
+}
+.optionTitle{
+    background-color: snow;
+    padding: 2%;
+    text-align: center;
+    color: var(--font-MainDarBlue);
+    font-size: 18px;
+    font-weight: bold;
+}
+.optionClassName{
+    color:gray;
+    margin: 2%;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+.optionWriting{
+    color: var(--font-MainDarBlue);
+    font-weight: 300;
+    font-size: 18px;
+    margin: 5%;
+    text-align: justify;
+}
+.oderOption:hover{
+    transform: scale(1.02);
+    box-shadow: 2px 2px 20px var(--font-color);
+}
+/*.partTimeOfers{
+    width: 100%;
+    background-color: snow;
+    color: var(--font-MainMiddleBlue);
+    font-size: 18px;
+    padding: 5%;
+    text-align: center;
+}*/
