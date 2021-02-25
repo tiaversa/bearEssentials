@@ -8,6 +8,9 @@
     --width-staff:200px;
     --height-staff:250px;
 }
+body{
+    overflow-x: hidden;
+}
 /*creating the heading About US*/
 /*Making grid container*/
 .container{

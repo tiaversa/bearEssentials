@@ -1,6 +1,4 @@
-body{
-    overflow-x: hidden;
-}
+
 /*Color Pallet*/
 :root{
     --font-color:#555; /*variable for the font color, so we can change more easily*/
@@ -9,6 +7,12 @@ body{
     --font-MainDarBlue:#0d3b66;
     --font-MainYellow:#f4d35e;
     --font-MainOrange:#f95738;
+}
+body{
+    overflow-x: hidden;
+}
+.overflowControl{
+    overflow-x: hidden;
 }
 /*classrooms area*/
 #classroomInfo{
