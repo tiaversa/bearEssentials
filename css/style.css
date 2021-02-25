@@ -10,11 +10,11 @@ body{
 /*Color Pallet*/
 :root{
     --font-color:#555; /*variable for the font color, so we can change more easily*/
-    --font-MainBabyBlue: #dde5b6;
-    --font-MainMiddleBlue:#adc178;
-    --font-MainDarBlue:#6c584c;
-    --font-MainYellow:#f0ead2;
-    --font-MainOrange:#a98467;
+    --font-MainBabyBlue: #faf0ca;
+    --font-MainMiddleBlue:#ee964b;
+    --font-MainDarBlue:#0d3b66;
+    --font-MainYellow:#f4d35e;
+    --font-MainOrange:#f95738;
 }
 li{
     color:var(--font-MainDarBlue);
@@ -275,6 +275,13 @@ cursor: pointer;
         opacity: 1;
     }
 }
+@media screen and (max-width:850px)
+{
+    footer{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "info info" "location1 location2""rights rights";
+    }
+}
 
 @media screen and (max-width:660px)
 {
@@ -285,13 +292,13 @@ cursor: pointer;
         font-size: 15px;
     }
     footer{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "info info"
-                            "location1 location2"
-                            "rights rights";
-
+        grid-template-columns: 1fr;
+        grid-template-areas: "info" "location1" "location2""rights";
     }
 }
+
+
+
 /*make the menu come from the side*/
 .nav-active{
     transform: translateX(0%);

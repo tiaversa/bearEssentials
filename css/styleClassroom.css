@@ -4,31 +4,58 @@ body{
 /*Color Pallet*/
 :root{
     --font-color:#555; /*variable for the font color, so we can change more easily*/
-    --font-MainBabyBlue: #dde5b6;
-    --font-MainMiddleBlue:#adc178;
-    --font-MainDarBlue:#6c584c;
-    --font-MainYellow:#f0ead2;
-    --font-MainOrange:#a98467;
+    --font-MainBabyBlue: #faf0ca;
+    --font-MainMiddleBlue:#ee964b;
+    --font-MainDarBlue:#0d3b66;
+    --font-MainYellow:#f4d35e;
+    --font-MainOrange:#f95738;
 }
 /*classrooms area*/
 #classroomInfo{
     text-align: center;
 }
+.classroomHeading{
+    background-image:url(/images/The-Sun-Also-Sets-Silhouette.svg);
+    background-position: bottom;
+}
 #classroomInfo h2{
+    position: relative;
+    z-index: 3;
     font-size: 50px;
     margin: 20px;
     color: var(--font-MainDarBlue);
+    background-color: rgba(255, 250, 250, 0.384);
+}
+.classroomMainImages{
+z-index: 1;
+position: relative;
+width: 100%;
+min-height: 50px;
+
+}
+.clasImage2{
+    position: absolute;
+    right: 5%;
+    height: 250px;
+    bottom: -300%;
 }
 .mainWriting{
-    background-color: snow;
-    color: var(--font-MainMiddleBlue);
-    font-size: 18px;
+    position: relative;
+    z-index: 3;
+    background-color: rgba(255, 250, 250, 0.733);
+    color: var(--font-MainDarBlue);
+    font-size: 16px;
     padding: 5%;
     text-align: center;
+    width: 70%;
+    margin: 20px 0px 20px 10%;
+    top: -60px;
+    border-radius: 20px;
 }
 
 /*rooms scrool*/
 .horizontalSlider{
+    position: relative;
     display: block;
     overflow-x: scroll;
     padding: 20px;
@@ -47,9 +74,21 @@ body{
 .roomItem{
     display: inline-block;
     margin-right: 15px;
-    width: 600px;
+    width: 400px;
     height: 300px;
-    background-color: yellow;
+    background-color: var(--font-MainBabyBlue);
+}
+.roomTitle{
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    font-size: 20px;
+    color: var(--font-MainDarBlue);
+    padding: 20px;
+    background-color: var(--font-MainBabyBlue);
+    border-radius: 20px;
+    border:2px dashed var(--font-MainDarBlue);
+    margin: 0px 30% 0px 30%;
 }
 
 /*prices*/
@@ -70,7 +109,7 @@ body{
     border-collapse: collapse;
     padding: 5px;
     font-size: 15px;
-    min-width: 500px;
+    min-width: 450px;
     width: 100%;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
@@ -143,11 +182,42 @@ tr:hover{
     transform: scale(1.02);
     box-shadow: 2px 2px 20px var(--font-color);
 }
-/*.partTimeOfers{
+.partTimeOffers{
     width: 100%;
     background-color: snow;
     color: var(--font-MainMiddleBlue);
     font-size: 18px;
     padding: 5%;
     text-align: center;
-}*/
+}
+
+@media screen and (max-width:780px)
+{
+    .otherPrices{
+        display: inline-block;
+        justify-content: center;
+        align-content: center;
+    }
+    .oderOption{
+        width: 70%;
+    }
+    .optionClassName{
+        font-size: 14px;
+    }
+    .optionClassName{
+        font-size: 10px;
+    }
+    .optionWriting{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:730px)
+{
+    .roomItem{
+        width: 300px;
+        height: 230px;
+    }
+    .roomItem img{
+        width: 300px;
+    }
+}
