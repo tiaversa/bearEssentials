@@ -285,9 +285,6 @@ cursor: pointer;
     .showNavBar + a, ul{
         display: none;
     }
-    .disableLink:link{
-        href
-    }
     [id^=plusNavMenu]:checked + ul{
         display: block;
     }
