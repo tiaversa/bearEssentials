@@ -141,43 +141,9 @@ display: inline-block;
 .subItem:hover{
     background-color: var(--font-MainBabyBlue);
 }
-/*dropdown menu*/
-/* The dropdown container */
-.dropdown {
-    float: left;
-    overflow: hidden;
-  }
-.dropdown .dropbtn{
-    background-color: snow;
-    border: none;
-    color:var(--font-MainDarBlue);
-    font-size: 20px;
-    font-weight: bold;
-    margin: 0; /* Important for vertical align on mobile phones */
-}
-.dropdown-content {
+.showNavBar, input{
     display: none;
-    position: absolute;
-    min-width: 160px;
-    z-index: 1;
-    background-color: snow;
-  }
-  /* Links inside the dropdown */
-.dropdown-content a {
-    float: none;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .dropbtn:hover{
-      color: var(--font-MainMiddleBlue);
-  }
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-  }
-
+}
 
 
 /*footer*/
@@ -307,6 +273,19 @@ cursor: pointer;
     /*make the nav Links fade in*/
     .navLinks li{
         opacity: 1;
+    }
+    .showNavBar{
+        display: block;
+        cursor: pointer;
+    }
+    .showNavBar:hover{
+        color: var(--font-MainMiddleBlue);
+    }
+    .showNavBar + a, ul{
+        display: none;
+    }
+    [id^=plusNavMenu]:checked + ul{
+        display: block;
     }
 }
 @media screen and (max-width:850px)
