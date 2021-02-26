@@ -32,7 +32,6 @@ nav{
     position: relative;
     font-size: 40px;
     float: left;
-    left:20%;
     margin: 0;
     padding: 0;
 }
@@ -42,7 +41,8 @@ nav{
 /*word rotator*/
 .heroWriting{
     position: absolute;
-    top:50%;
+    min-width: 40%;
+    top:30%;
     left:50%;
     transform: translate(-50%, -50%);
 }
@@ -56,7 +56,8 @@ height: 100px;
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 45%;
+    top:230%;
+    transform: translate(-50%, -50%);
 }
 li.one, li.two, li.three, li.four, li.five, li.six, li.single-word{
     list-style:none;
@@ -120,7 +121,8 @@ li.one, li.two, li.three, li.four, li.five, li.six, li.single-word{
     font-size: 20px;
     width: 30%;
     top:400px;
-    left: 30%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 .tourButton:hover{
     background-color: var(--font-MainDarBlue);
@@ -393,10 +395,10 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
 }
 
 .parentsTList{
-    width: 300px;
+    width: 40%;
     background: var(--font-MainDarBlue);
     position:relative;
-    min-height: 370px;
+    min-height: 380px;
     text-align: justify;
     padding: 20px;
 }
@@ -426,8 +428,12 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
 @media screen and (max-width:920px)
 {
     .hero{
-        width: 60%;
+        width: 100%;
         height: 500px;
+        margin: 0;
+    }
+    .heroWriting{
+        width: 62%;
     }
     .heroRightSide{
         width: 100%;
@@ -442,6 +448,14 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
         height: 500px;;
     }
     .tourButton{
-        top: 350px;
+        top: 68%;
+    }
+    .bgParentsTestimonies{
+        display: block;
+    }
+    .parentsTList{
+        width: 60%;
+        margin: 20%;
+
     }
 }
