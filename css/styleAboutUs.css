@@ -45,7 +45,7 @@ body{
     padding: 1% 5%;
     background-color: snow;
     border-radius: 10px;
-    margin: 0% 2% 0% 2%;
+    margin: 1% 2% 1% 2%;
     padding: 5%;
 }
 p{
@@ -134,7 +134,10 @@ overflow-x: hidden;
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+    .staffPicture{
+        width: 48%;
+        max-width: var(--width-staff);
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

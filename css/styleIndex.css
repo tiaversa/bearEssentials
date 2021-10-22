@@ -21,93 +21,72 @@ body{
     position: relative;
     display: block;
 }
-#BGImage{
-    width: 100%;
-    height: 100%;
-}
-nav{
-    position: sticky;
-}
-
 /*writing side of the hero*/
 .hero{
-    z-index: 2;
     width: 49%;
     min-width: none;
-    height: 600px;
-    position: relative;
+    height: 100vh;
     font-size: 40px;
-    float: left;
     margin: 0;
     padding: 0;
 }
+/*images*/
+.hero img{
+    position: absolute;
+    height: 105vh;
+    top: -4vh;
+    left: -50%;
+}
+
 .yellow{
     color: var(--font-MainMiddleBlue);
 }
-
-.heroWriting{
-    position: absolute;
-    min-width: 40%;
-    top:30%;
-    left:50%;
-    transform: translate(-50%, -50%);
+/*container for the whole hero text*/
+.wordBox{
+position: absolute;
+top: 25vh;
+width: 58vw;
+left: calc(50vw - 100px);
+text-shadow: 0 1px 1px rgba(0,0,0,.5);
 }
-word rotator
+/*cotainer for the changing words*/
 .wordList{
-width: 200px;
-position: relative;
-justify-content: center;
-height: 100px;
-}
-.changingWordsList{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top:31vh;
-    left: 70%;
-    transform: translate(-50%, -50%);
-}
-li.one, li.two, li.three, li.four, li.five, li.six, li.single-word{
-    list-style:none;
-    margin: 0;
     display: inline-block;
-    position: absolute;
-    color: var(--font-MainMiddleBlue);
-}
-
-.one, .two, .three, .four, .five, .six{ padding-left: .35em;}
-.single-word{ padding-left: 0;}
-
-/*Animation*/
-.one { 
-    opacity:0;
-    animation: fade 18s 0s infinite linear;
-}
-.two { 
-    opacity:0;
-    animation: fade 18s 3s infinite linear;
-}
-.three { 
-    opacity:0;
-    animation: fade 18s 6s infinite linear;
-}
-.four { 
-    opacity:0;
-    animation: fade 18s 9s infinite linear;
-}
-.five { 
-    opacity:0;
-    animation: fade 18s 12s infinite linear;
-}
-.six { 
-    opacity:0;
-    animation: fade 18s 15s infinite linear;
     
 }
+.wordList span{
+    position: absolute;
+    top: 17vh;
+    left: calc(15% - 5px);
+    overflow: hidden;
+    transform: translateY(-50%);
+    animation: fade 12s linear infinite;
+    opacity: 0;
+    color: var(--font-MainMiddleBlue);
+}
+/*delay for the Animation of the words*/
+.qOne {
+    animation-delay: 0s;
+}
+.wordList span:nth-child(2) { 
+    animation-delay: 2s;
+}
+.wordList span:nth-child(3) { 
+    animation-delay: 4s;
+}
+.wordList span:nth-child(4) { 
+    animation-delay: 6s;
+}
+.wordList span:nth-child(5) { 
+    animation-delay: 8s;
+}
+.wordList span:nth-child(6) { 
+    animation-delay: 10s;
+}
+
 
 /*the button to schedule a tour*/
 .tourButton{
-    z-index: 4;
     position:absolute;
     padding: 10px;
     border-radius: 30px;
@@ -118,168 +97,15 @@ li.one, li.two, li.three, li.four, li.five, li.six, li.single-word{
     text-align: center;
     transition: all 0.2s;
     font-size: 20px;
-    width: 30%;
-    top:400px;
-    left:50%;
+    width: 50vw;
+    top:30vh;
+    left: calc(50% - 9vw);
     transform: translate(-50%, -50%);
 }
 .tourButton:hover{
     background-color: var(--font-MainDarBlue);
     cursor: pointer;
 }
-
-/*imgaes*/
-.heroImage{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    position: absolute;
-    top:50px;
-    width: 100%;
-    height: 600px;
-    overflow: visible;
-}
-.heroBackground{
-    background-image:url("../images/background.svg");
-}
-.heroForeground{
-    z-index: 3;
-    background-image:url("../images/front.svg");
-}
-
-/*hero right side*/
-.heroRightSide{
-    width: 49%;
-    height: 600px;
-    min-width: none;
-    position: relative;
-    box-sizing: border-box;
-    float: right;
-}
-.bgBox1{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    right: 50%;
-    left: 30%;
-    background-color: var(--font-MainYellow);
-}
-.bgBox2{
-    position: absolute;
-    top:15%;
-    left: 5%;
-    background-color: var(--font-MainMiddleBlue);
-    opacity: 0.9;
-    border-radius: 10px;
-    padding: 30px;
-}
-/*childs quote*/
-.bgBox3{
-background-color: var(--font-MainBabyBlue);
-padding: 15px;
-position: relative;
-    width: 17em;
-    height: 100px;
-}
-
-.bgBox3::before{
-    content: '\201c';
-    top:-40px;
-    left: -10px;
-    color: var(--font-color);
-}
-.bgBox3::after{
-    content: '\201d';
-    bottom: -120px;
-    right: -20px;
-    color: var(--font-color);
-}
-.bgBox3::before, .bgBox3::after{
-    font-size: 9rem;
-    position: absolute;
-}
-/*changing quotes*/
-/*word rotator*/
-.changingQuotesList{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top:25px;
-    left:10px;
-    width: 16em;
-    text-align:left;
-}
-li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix, li.quotesingle-word{
-    list-style:none;
-    margin: 0;
-    display: inline-block;
-    position: absolute;
-    font-size: 12px;
-}
-
-/*.quoteone, .quotetwo, .quotethree, .quotefour, .quotefive, .quotesix{ padding-left: .35em;}
-.quotesingle-word{ padding-left: 0;}*/
-
-/*Animation*/
-.quoteone { 
-    opacity:0;
-    animation: fade 180s 0s infinite linear;
-}
-.quotetwo { 
-    opacity:0;
-    animation: fade 180s 30s infinite linear;
-}
-.quotethree { 
-    opacity:0;
-    animation: fade 180s 60s infinite linear;
-}
-.quotefour { 
-    opacity:0;
-    animation: fade 180s 90s infinite linear;
-}
-.quotefive { 
-    opacity:0;
-    animation: fade 180s 120s infinite linear;
-}
-.quotesix { 
-    opacity:0;
-    animation: fade 180s 150s infinite linear;
-    
-}
-
-/*Testimonials*/
-.bgBox4{
-    background-color: var(--font-MainDarBlue);
-    position: absolute;
-    color: var(--font-MainYellow);
-    text-align: center;
-    padding: 5px;
-    width: 200px;
-    border-radius: 20px;
-    top: 2%;
-    left: 28%;
-    font-size: 25px;
-}
-
-/*Box with the kids projects*/
-.bgBox5{
-    position: relative;
-    width: 200px;
-    height: 120px;
-    overflow: hidden;
-    background-color: snow;
-    left:25%;
-    top:70%;
-}
-.bgBox5 img{
-    width: 200px;
-    height: 120px;
-}
-.changingImagesList{
-    margin: 0;
-    padding: 0;
-}
-
 
 /*Covid policy area*/
 .covidPolicy{
@@ -304,9 +130,8 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
 
 /*middle area about box*/
 .bgAboutBox{
-    width: 100%;
+    width: 100vw;
     position: relative;
-    z-index: 2;
 }
 /*titles*/
 .bgAboutBox h3{
@@ -317,9 +142,9 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
 }
 /*all boxes*/
 .aboutBox{
-    width: 30%;
+    width: 90%;
     padding: 5%;
-    position: relative;
+    display: flex;
     display:inline-table;
     align-items: center;
     transition: all 0.2s;
@@ -340,22 +165,28 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
 
 /*the locations area*/
 .indexAreaLocations{
-    z-index: 2;
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
+    width: 98vw;
     background-color: var(--font-MainBabyBlue);
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.indezAreaLocation1{
-    width: 45%;
-    background-color: red;
+.ALBox{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
 }
-.indexAreaLocatio2{
-    width: 45%;
-    background-color: var(--font-MainDarBlue);
+.indexAreaLocations span{
+    width: 90vw;
+    font-size: x-large;
 }
+.indexAreaLocations img{
+    width: 40vw;
+}
+.indexAreaLocations p{
+    padding: 2px;
+}
+
 
 /*separation yellow box*/
 .separationYellowBox{
@@ -413,66 +244,11 @@ li.quoteone, li.quotetwo, li.quotethree, li.quotefour, li.quotefive, li.quotesix
     position: relative;
 }
 
-@media screen and (max-width:920px)
-{
-    .hero{
-        width: 100%;
-        height: 500px;
-        margin: 0;
-    }
-    .heroWriting{
-        min-width: 60%;
-        top:30%;
-        left:55%;
-        transform: translate(-50%, -50%);
-    }
-    .heroRightSide{
-        width: 100%;
-    }
-    .aboutBox{
-        width: 45%;
-        font-size: 10px;
-    }
-    .ourMission{
-        float: right;
-    }
-    .heroImage{
-        height: 500px;
-        overflow: hidden;
-    }
-    .tourButton{
-        width: 60%;
-    }
-    .bgParentsTestimonies{
-        display: block;
-    }
-    .parentsTList{
-        width: 60%;
-        margin: 20%;
-
-    }
-}
-
-/*@keyframes fade{
-    0% {opacity:0;}
-    8% {opacity:1;}
-    15% {opacity:1;}
-    20% {opacity:0;}
-    100% {opacity:0;}
-    
-}*/
-@media all and (max-width:30em){
-    .touButton{
-        display: block;
-        margin: 0.2em auto;
-    }
-}
-
 @keyframes fade{
-    0% {opacity:0;}
-    5% {opacity:1;}
-    15% {opacity:1;}
-    18% {opacity:0;}
-    100% {opacity:0;}
+    0% {opacity:0;transform: translateY(-30px);}
+    2% {opacity:1;transform: translateY(0px);}
+    15% {opacity:1;transform: translateY(0px);}
+    18% {opacity:0;transform: translateY(30px);}
+    100% {opacity:0;transform: translateY(30px);}
     
 }
