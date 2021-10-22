@@ -20,7 +20,7 @@ body{
     position: relative;
     justify-content: center;
 }
-#about, #vision, #mission{
+#about, #ourStory, #food{
     display: flex;
     flex-wrap: wrap;
 }
@@ -151,7 +151,7 @@ overflow-x: hidden;
     .aboutWriting{
         width: 56vw;
     }
-    #mission{
+    #ourStory{
         flex-direction: row-reverse;
     }
 }
