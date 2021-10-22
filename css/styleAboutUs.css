@@ -10,41 +10,22 @@
 }
 body{
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 /*creating the heading About US*/
 /*Making grid container*/
 .container{
     margin: 0px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 20px;
-    grid-template-areas: "image1 writing1 writing1"
-                        "writing2 image2 image2"
-                        "image3 image3 writing3"
-                        "meetStaff meetStaff meetStaff";
-    z-index: 2;
+    width: 100vw;
     position: relative;
-
+    justify-content: center;
 }
-.image1{
-    min-height: 60px;
-    background-image: url('../images/IMG_7471.JPG');
-    background-size:100%;
-    grid-area: image1;
+#about, #vision, #mission{
+    display: flex;
+    flex-wrap: wrap;
 }
-.image2{
-    min-height: 60px;
-    background-image: url('../images/crayons-1209804_1920.jpg');
-    background-size: 100%;
-    background-position: bottom;
-    grid-area: image2;
-}
-.image3{
-    min-height: 60px;
-    background-image: url('../images/child-865116_1920.jpg');
-    background-size:130%;
-    grid-area: image3;
+.container img{
+    width: 99vw;
 }
 
 /*box where the about writings will be inside*/
@@ -59,6 +40,7 @@ body{
     margin: 8px;
 }
 .aboutWriting{
+    width: 98vw;
     position: relative;
     padding: 1% 5%;
     background-color: snow;
@@ -70,15 +52,6 @@ p{
     text-align: justify;
     text-justify: inter-word;
     font-size: medium;
-}
-.writing1{
-    grid-area: writing1;
-}
-.writing2{
-    grid-area: writing2;
-}
-.writing3{
-    grid-area: writing3;
 }
 /*About us writing special middle box*/
 .AWMiddle{
@@ -118,12 +91,12 @@ overflow-x: hidden;
 /*Staff Pictures Space*/
 .staffPictureBox{
     position: relative;
-    display: grid;
+    display: flex;
     margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
     padding: 5%;
-    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    width: 90vw;
+    justify-content: space-around;
 }
 .staffPicture{
     width: var(--width-staff);
@@ -131,6 +104,7 @@ overflow-x: hidden;
     background-size: var(--width-staff);
     color: snow;
     overflow: hidden;
+    margin: 0.5%;
 }
 .staffPInsideText{
     position: relative;
@@ -156,41 +130,38 @@ overflow-x: hidden;
 .staffImage1:hover{
     background-image: url("../images/tawFun.jpg");
 }
-@media screen and (max-width: 720px) {
-    .staffPictureBox { 
-        background-color: red;
-        grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 840px) {
-    .staffPictureBox {grid-template-columns: 1fr 1fr 1fr; }
-    .container{
-        display:block;
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container img{
+        width: 40vw;
     }
-  }
-  @media (max-width: 950px) {
-    .image1{
-        display: none;
+    .aboutWriting{
+        width: 56vw;
     }
-    .container{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "writing1 writing1"
-                        "writing2  image2"
-                        "image3 image3"
-                        "writing3 writing3"
-                        "meetStaff meetStaff";
+    #mission{
+        flex-direction: row-reverse;
     }
-  }
-  @media (max-width: 1100px) {
-    .staffPictureBox { grid-template-columns: repeat(3, 1fr); }
-    .image1{
-        display: block;
-    }
-    .container{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "writing1 writing1"
-                        "writing2  image2"
-                        "image3 image3"
-                        "image1 writing3"
-                        "meetStaff meetStaff";
-    }
-  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
