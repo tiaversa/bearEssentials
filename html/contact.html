@@ -82,43 +82,46 @@
         <div class="sandwichBar bar3"></div> 
     </div>
 </nav>
-
-
-    <!--Image-->
-    <div class="image"><p></p></div>
-
     <!--Contact Form-->
         <div class="container">
-            <form action="" method="POST" class="form">
+            <!--Using formsubmit-->
+            <form action="https://formsubmit.co/timnaaversa@gmail.com" method="POST" class="form">
                 <!--Form name area-->
                 <div class="form-group">
                     <!--remember the for attribute on the label need to mach the name atribute-->
-                    <label for="name" class="form-label">Your Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Jane Doe" tabindex="1" required>
+                    <input type="text" id="name" name="name" tabindex="1" required>
+                    <label class="label-name" for="name"><span class="content-name">Your Name*</span></label>
                     <!--Don't forget the tabindex, it helps with acessibility-->
                 </div>
                 <!--Form email area-->
                 <div class="form-group">
-                    <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="abc@email.com" tabindex="2" required>
+                    <input type="email" id="email" name="email" tabindex="2" required>
+                    <label for="email" class="label-name"><span class="content-name">Email*</span></label>
                 </div>
+                <!--Form phone number area-->
                 <div class="form-group">
-                    <label for="phone" class="form-label">Your Phone Number</label>
-                    <input type="number" class="form-control" id="phone" name="phone" placeholder="(123)456-7890" tabindex="3">
+                    <input type="number" id="phone" name="phone" tabindex="3">
+                    <label for="phone" class="label-name"><span class="content-name">Your Phone Number</span></label>
                 </div>
                 <!--Form Subject of the email-->
                 <div class="form-group">
-                    <label for="subject" class="form-label">Subject</label>
-                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Hello!" tabindex="4">
+                    <input type="text" id="subject" name="subject" tabindex="4">
+                    <label for="subject" class="label-name"><span class="content-name">Subject</span></label>
                 </div>
                 <!--Form Message Area-->
                 <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea rows="5" class="form-control" cols="50" id="message" name="message" placeholder="Enter Message..." tabindex="5"></textarea>
+                    <textarea rows="5" class="form-control" cols="50" id="message" name="message"  tabindex="5"></textarea>
+                    <label for="message" class="label-name"><span class="content-name">Message</span></label>
                 </div>
                 <!--Form Submit Button-->
                 <div><button type="submit" class="btn">Send Message</button></div>
+                <!--Send it to thank you page-->
+                <input type="hidden" name="_next" value="https://tiaversa.github.io/bearEssentialsAcademy/">
+                <!--Subject in the email-->
+                <input type="hidden" name="_subject" value="Cotact Message From The Website">
+                <input type="hidden" name="_autoresponse" value="Thank you very much for getting in contact with Bear Essentials Academy Daycare. We will get in contact with you as soon as possible.">
             </form>
+            <p>* Required fields</p>
         </div>
 
         <!--footer-->
