@@ -18,6 +18,7 @@ body{
 }
 form{
     width: 50vw;
+    min-width: 200px;
     position: relative;/*ecessary to mess around with the label and inputs*/
     overflow: hidden;
 }
