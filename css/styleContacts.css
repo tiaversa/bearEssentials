@@ -19,6 +19,7 @@ body{
 form{
     width: 50vw;
     min-width: 200px;
+    max-width: 500px;
     position: relative;/*ecessary to mess around with the label and inputs*/
     overflow: hidden;
 }
@@ -35,7 +36,7 @@ form{
     border: none;
     outline: none;
 }
-.form label{
+.label-name{
     position: absolute;
     left: 0%;
     width: 100%;
@@ -44,7 +45,7 @@ form{
     pointer-events: none;
     border-bottom: 1px solid black;
 }
-.form label::after{
+.label-name::after{
     content: "";
     position: absolute;
     left: 0px;
@@ -70,4 +71,7 @@ form input:focus + .label-name .content-name, form input:valid + .label-name .co
 }
 form input:focus + .label-name::after, form input:valid + .label-name::after{
     transform: translateX(0%);
+}
+form p{
+    font-size: 5px;
 }
